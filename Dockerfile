@@ -22,4 +22,6 @@ RUN chmod 600 /home/zplug/.ssh/id_rsa
 USER zplug
 WORKDIR /home/zplug
 
+RUN zsh -ic"source ./.zplug/test.zsh ; zplug install"
+
 CMD ["/bin/zsh"]
