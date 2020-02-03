@@ -12,7 +12,7 @@ RUN groupadd -g 1000 zplug && \
     echo 'zplug:zplug' | chpasswd
 
 # .ssh dir needs to be copied from your home
-ADD .ssh /home/zplug/.ssh
+#ADD .ssh /home/zplug/.ssh
 
 ADD . /home/zplug/.zplug
 
