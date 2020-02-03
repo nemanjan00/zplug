@@ -22,6 +22,6 @@ RUN chown -R zplug:zplug /home/zplug
 USER zplug
 WORKDIR /home/zplug
 
-RUN zsh -ci "source ./.zplug/test.zsh ; zplug install"
+RUN zsh -ci "source ./.zplug/test.zsh ; TERM=xterm-256color zplug install"
 
 CMD ["/bin/zsh"]
