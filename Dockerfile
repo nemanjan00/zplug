@@ -16,12 +16,12 @@ RUN groupadd -g 1000 zplug && \
 
 ADD . /home/zplug/.zplug
 
-#RUN chown -R zplug:zplug /home/zplug
+RUN chown -R zplug:zplug /home/zplug
 #RUN chmod 600 /home/zplug/.ssh/id_rsa
 
 USER zplug
 WORKDIR /home/zplug
 
-RUN zsh -ic"source ./.zplug/test.zsh ; zplug install"
+RUN zsh -ci "source ./.zplug/test.zsh ; zplug install"
 
 CMD ["/bin/zsh"]
